@@ -31,6 +31,7 @@
   padding: 0;
   box-sizing: border-box !important;
   user-select: none;
+  transition: all 1s;
 }
 html,body {
   height: 100%;
@@ -39,7 +40,7 @@ body {
   padding: 5.25rem 5.25rem;
   margin: 0;
   background: var(--bg-color);
-  transition: all 0.5s;
+  transition: all 1.5s;
   backdrop-filter: blur(0.125rem);
   backdrop-filter: brightness(60%);
   backdrop-filter: saturate(80%);
@@ -232,7 +233,7 @@ a {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   text-align: center;
-  font-size: 100px;
+  font-size: 5.21vw;
   color: transparent;
   margin: 0;
   letter-spacing: 2.2px;
@@ -244,10 +245,10 @@ a {
   color: var(--text-color);
 }
 #resume {
-  max-width: 1150px;
+  max-width: 71.875REM;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
-  font-size: 42px;
+  font-size: 2.188vw;
   text-decoration: none;
   text-align: center;
   color: transparent;
@@ -259,4 +260,241 @@ a {
   letter-spacing: 2.2px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-color);
+}
+
+@media  (max-width: 468px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    user-select: none;
+    transition: all 1s;
+  }
+  html,body {
+    height: 100%;
+  }
+  body {
+    padding: 1rem 1rem;
+    margin: 0;
+    background: var(--bg-color);
+    transition: all 1.5s;
+    backdrop-filter: blur(0.125rem);
+    backdrop-filter: brightness(60%);
+    backdrop-filter: saturate(80%);
+    transition: all 1s ease;
+    overflow: hidden;
+  }
+  
+  body::after {
+    content: "";
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 11.375rem;
+    opacity: 0.12;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    gap: 154px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #headerMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  a {
+    text-decoration: none;;
+  }
+  #nameABV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin: 0;
+    color: var(--text-color);
+    text-shadow: var(--textShadow);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+  }
+  /* Group one */
+  #group {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  /* Switch */
+  #switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+  }
+  #switch button {
+    width: 32px;
+    height: 32px;
+    background: var(--switch-bg-url) no-repeat center;
+    border: none;
+    border-radius: 50%;
+    animation: rotate-back 2s forwards;
+    z-index: 1;
+  }
+  .light #switch button {
+    animation: rotate-in 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes rotate-in {
+    0% {
+        transform: rotate(0);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-back {
+    0% {
+        transform: rotate(0);
+    } 
+    100% {
+        transform: rotate(-360deg);
+    }
+  }
+  
+  #switch button:hover {
+    outline: 2px solid var(--highlight-color);
+  }
+  
+  /* Dropdown */
+  #menu {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 32px;
+    width: 48px;
+    height: 48px;
+    transform: scale(0.75);
+  }
+  #menuButton {
+    background: none;
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .candyBox {
+    width: 6px;
+    height: 6px;
+    outline: 3px solid;
+    border-radius: 100px;
+    background: none;
+    transition: all 1.5s;   
+  }
+  
+  .circleOne,
+  .circleTwo,
+  .circleFour {
+    outline-color: #d5d5d5;
+  }
+  .circleThree,
+  .circleFive,
+  .circleSix {
+    outline-color: #9e9d9d;
+  }
+  .circleSeven,
+  .circleEight,
+  .circleNine {
+    outline-color:  #8d8d8d;
+  }
+  
+  .light .candyBox {
+    width: 6px;
+    height: 6px;
+    outline: 3px solid ;
+    border-radius: 100px;
+    background: none;
+    transition: all 1.5s;
+  }
+  
+  .light .circleOne,
+  .light .circleTwo,
+  .light .circleFour {
+    outline-color: #414141;
+  }
+  .light .circleThree,
+  .light .circleFive,
+  .light .circleSeven {
+    outline-color: rgb(32, 32, 32);
+  }
+  .light .circleSix,
+  .light .circleEight,
+  .light .circleNine {
+    outline-color: #000000;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background: var(--bg-img);
+    background-size: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #firstContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1.5s;
+  }
+  
+  #introduction {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 30px;
+    color: transparent;
+    margin: 0;
+    letter-spacing: 2.2px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--text-color);
+  }
+  
+  #name {
+    color: var(--text-color);
+  }
+  #resume {
+    max-width: 71.875REM;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    margin: 0;
+    border-top: 3px dashed var(--text-color);
+    text-shadow: var(--textShadow);
+    letter-spacing: 2.2px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--text-color);
+  }
 }
