@@ -31,7 +31,6 @@
   padding: 0;
   box-sizing: border-box !important;
   user-select: none;
-  transition: all 1s;
 }
 html,body {
   height: 100%;
@@ -44,7 +43,7 @@ body {
   backdrop-filter: blur(0.125rem);
   backdrop-filter: brightness(60%);
   backdrop-filter: saturate(80%);
-  transition: all 1s ease;
+  transition: all 1s;
   overflow: hidden;
 }
 
@@ -60,6 +59,7 @@ body::after {
   position: absolute;
   width: 100%;
   height: 100%;
+  transition: all 1s;
 }
 
 #container {
@@ -68,6 +68,7 @@ body::after {
   gap: 154px;
   position: relative;
   z-index: 1;
+  transition: all 1s;
 }
 
 #headerMain {
@@ -237,7 +238,7 @@ a {
   color: transparent;
   margin: 0;
   letter-spacing: 2.2px;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-color);
 }
 
@@ -258,6 +259,12 @@ a {
   border-top: 3px dashed var(--text-color);
   text-shadow: var(--textShadow);
   letter-spacing: 2.2px;
+}
+.transparanteL {
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: var(--text-color);
+}
+.transparanteLTwo {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-color);
 }
@@ -473,7 +480,7 @@ a {
     color: transparent;
     margin: 0;
     letter-spacing: 2.2px;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--text-color);
   }
   

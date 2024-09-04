@@ -7,9 +7,9 @@ function Home() {
             <main id="container">
                 <section id="firstContainer">
                     <div id="homeContainer">
-                        <h1 id="introduction">Hi! I'm <span id="name">Victor Soares</span>!</h1>
+                        <h1 id="introduction"><span className="transparanteL">Hi! I'm</span> <span id="name">Victor Soares</span><span className="transparanteL">!</span></h1>
                         <p id="resume">
-                            A <span id="name">Frontend Developer</span> & <span id="name">3D Artist</span>
+                            <span className="transparanteLTwo">A </span><span id="name">Frontend Developer</span> <span className="transparanteLTwo">& </span><span id="name">3D Artist</span>
                         </p>
                     </div>
                 </section>
