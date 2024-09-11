@@ -275,7 +275,6 @@ a {
     padding: 0;
     box-sizing: border-box !important;
     user-select: none;
-    transition: all 1s;
   }
   html,body {
     height: 100%;

@@ -14,7 +14,7 @@ function Toggle() {
         } else {
             switchCont.style.animation = "fall-back 1.5s forwards";
         }
-      }
+    }
 
     return (
         <div id="switch">
