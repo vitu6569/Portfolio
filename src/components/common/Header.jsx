@@ -10,9 +10,7 @@ function Header() {
             </a>
             <div id="group">
                 <Toggle/>
-                <div type="menu" id="menu">
-                    <Circles/>
-                </div>      
+                <Circles/>     
             </div>
         </header>
     )

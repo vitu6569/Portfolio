@@ -19,7 +19,6 @@ function Toggle() {
     return (
         <div id="switch">
             <button onClick={handleClick}>
-
             </button>
             <span></span>
         </div>

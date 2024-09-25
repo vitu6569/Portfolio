@@ -1,18 +1,38 @@
 import React from "react";
 
 function Circles() {
+
+    function menuInp() {
+        // usar essa variavel dps
+        // const menuCont = document.getElementById("menuButton");
+        const html = document.documentElement;
+        const currentState = html.classList.contains("on") ? "off" : "on";
+                
+        localStorage.setItem("state", currentState);
+        html.className = currentState;
+    
+        if (currentState === "on") {
+                alert('tá funcionando sapoha')
+        } else {
+        }
+    }
+
     return (
-        <button id="menuButton">
-            <div className="candyBox circleOne"></div>
-            <div className="candyBox circleTwo" id="topcircle"></div>
-            <div className="candyBox circleThree"></div>
-            <div className="candyBox circleFour" id="leftcircle"></div>
-            <div className="candyBox circleFive"></div>
-            <div className="candyBox circleSix" id="rightcircle"></div>
-            <div className="candyBox circleSeven"></div>
-            <div className="candyBox circleEight" id="bottomcircle"></div>
-            <div className="candyBox circleNine"></div>
-        </button>
+        <div id="menuButton">
+            <button id="circlesGroups" onClick={menuInp}>
+                <div id="circlesGrid">
+                    <span className="candyBox circleOne"></span>
+                    <span className="candyBox circleTwo" id="topcircle"></span>
+                    <span className="candyBox circleThree"></span>
+                    <span className="candyBox circleFour" id="leftcircle"></span>
+                    <span className="candyBox circleFive"></span>
+                    <span className="candyBox circleSix" id="rightcircle"></span>
+                    <span className="candyBox circleSeven"></span>
+                    <span className="candyBox circleEight" id="bottomcircle"></span>
+                    <span className="candyBox circleNine"></span>
+                </div>
+            </button>
+        </div>
     )
 };
 

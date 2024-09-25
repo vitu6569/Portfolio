@@ -145,30 +145,47 @@ a {
 }
 
 /* Dropdown */
-#menu {
+#menuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Adicione mais estilos aqui, se necessário */
+}
+
+#menuButton button {
+  background: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: 32px;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 16px;
+  /* Adicione mais estilos aqui, se necessário */
+}
+
+#circlesGrid {
   width: 48px;
   height: 48px;
-  transform: scale(0.75);
-}
-#menuButton {
-  background: none;
-  border: none;
   display: grid;
+  align-items: center;
+  justify-content: center; /* Centraliza os elementos do grid */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
+  /* Adicione mais estilos aqui, se necessário */
 }
+
+
 .candyBox {
   width: 6px;
   height: 6px;
   outline: 3px solid;
   border-radius: 100px;
   background: none;
-  transition: all 1.5s;   
+  transition: all 1.5s; 
+  z-index: 0;
 }
 
 .circleOne,
