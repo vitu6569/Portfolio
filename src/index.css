@@ -117,6 +117,8 @@ a {
   border-radius: 50%;
   animation: rotate-back 2s forwards;
   z-index: 1;
+
+  cursor: pointer;
 }
 .light #switch button {
   animation: rotate-in 2s;
@@ -163,6 +165,8 @@ a {
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   padding: 16px;
   /* Adicione mais estilos aqui, se necessário */
+
+  cursor: pointer;
 }
 
 #circlesGrid {
@@ -173,14 +177,15 @@ a {
   justify-content: center; /* Centraliza os elementos do grid */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  gap: 12px;
+  transform: scale(0.75);
   /* Adicione mais estilos aqui, se necessário */
 }
 
 
 .candyBox {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   outline: 3px solid;
   border-radius: 100px;
   background: none;
@@ -229,6 +234,85 @@ a {
   outline-color: #000000;
 }
 
+/* Menu */
+.on #menuSel {
+  display: flex;
+  position: fixed;
+  left: 40%;
+  top: 50%;
+  transition: ease-in 1.5s;
+  z-index: 2;
+}
+#menuSel {
+  display: none;
+  position: fixed;
+  left: 25%;
+  top: 50%;
+  z-index: 2;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  justify-content: center;
+  align-items: start;
+  list-style: decimal-leading-zero;
+}
+#ul {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.li {
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: var(--text-color);
+  margin: 0;
+  letter-spacing: 2.2px;
+}
+#home {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+#home::before {
+  content: "01.";
+  font-size: 20px;
+}
+#about {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+#about::before {
+  content: "02.";
+  font-size: 20px;
+}
+#project {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+#project::before {
+  content: "03.";
+  font-size: 20px;
+}
+#contact {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+#contact::before {
+  content: "04.";
+  font-size: 20px;
+}
+
 #container {
   display: flex;
   justify-content: center;
@@ -246,6 +330,10 @@ a {
   transition: all 1.5s;
 }
 
+.on #introduction {
+  display: none;
+  transition: all 1s ease;
+}
 #introduction {
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -261,6 +349,10 @@ a {
 
 #name {
   color: var(--text-color);
+}
+.on #resume {
+  display: none;
+  transition: all 1s ease;
 }
 #resume {
   max-width: 71.875REM;
@@ -403,30 +495,50 @@ a {
   }
   
   /* Dropdown */
-  #menu {
+
+  #menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adicione mais estilos aqui, se necessário */
+  }
+
+  #menuButton button {
+    background: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: end;
-    gap: 32px;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 16px;
+    /* Adicione mais estilos aqui, se necessário */
+
+    cursor: pointer;
+  }
+
+  #circlesGrid {
     width: 48px;
     height: 48px;
-    transform: scale(0.75);
-  }
-  #menuButton {
-    background: none;
-    border: none;
     display: grid;
+    align-items: center;
+    justify-content: center; /* Centraliza os elementos do grid */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    gap: 12px;
+    transform: scale(0.50);
+    /* Adicione mais estilos aqui, se necessário */
   }
+
   .candyBox {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     outline: 3px solid;
     border-radius: 100px;
     background: none;
-    transition: all 1.5s;   
+    transition: all 1.5s; 
+    z-index: 0;
   }
   
   .circleOne,

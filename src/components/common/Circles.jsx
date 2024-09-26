@@ -6,14 +6,15 @@ function Circles() {
         // usar essa variavel dps
         // const menuCont = document.getElementById("menuButton");
         const html = document.documentElement;
-        const currentState = html.classList.contains("on") ? "off" : "on";
+        const currentState = html.classList.contains("on") ? "" : "on";
                 
         localStorage.setItem("state", currentState);
         html.className = currentState;
     
         if (currentState === "on") {
-                alert('tá funcionando sapoha')
+
         } else {
+
         }
     }
 
