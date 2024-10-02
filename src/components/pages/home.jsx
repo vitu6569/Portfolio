@@ -1,6 +1,7 @@
 import React from "react";
 import Header from '../common/Header'
 import Menu from '../common/menu'
+
 function Home() {
     return (
         <div>

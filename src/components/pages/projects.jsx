@@ -2,7 +2,7 @@ import React from "react";
 import Header from '../common/Header'
 import Menu from '../common/menu'
 
-function About() {
+function Projects() {
     return (
         <div>
             <div><Header/></div>
@@ -11,4 +11,4 @@ function About() {
     )
 }
 
-export default About;
+export default Projects;
