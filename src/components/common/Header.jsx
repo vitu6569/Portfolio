@@ -6,7 +6,7 @@ function Header() {
     return (
         <header id="headerMain">
              <a href="../pages/home">
-                <h1 id="nameABV">VT.</h1>
+                <h1 id="nameABV">VTS.</h1>
             </a>
             <div id="group">
                 <Toggle/>

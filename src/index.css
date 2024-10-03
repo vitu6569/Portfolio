@@ -124,6 +124,12 @@ a {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
 }
+.on #nameABV::after {
+  content: 'Victor|Soares.';
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
 /* Group one */
 #group {
   display: flex;
@@ -271,11 +277,19 @@ a {
   display: flex;
   justify-content: center;
   height: 75vh;
+
 }
 #menuSel {
   display: none;
   position: fixed;
   z-index: 2;
+}
+.menuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1.5s;
 }
 .options {
   display: flex;
@@ -288,7 +302,6 @@ a {
   justify-content: center;
   flex-direction: column;
   transition: all 1.5s;
-  margin: 0 auto;
 }
 .li {
   text-transform: uppercase;
@@ -299,6 +312,7 @@ a {
   margin: 0;
   letter-spacing: 2.2px;
   text-align: center;
+  width: 100%;
 }
 a {
   color: var(--text-color);
@@ -581,6 +595,23 @@ a {
     /* Adicione mais estilos aqui, se necessário */
   }
 
+  .li {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--text-color);
+    margin: 0;
+    letter-spacing: 2.2px;
+    text-align: center;
+    width: 100%;
+  }
+  .on #nameABV::after {
+    content: 'Victor|Soares.';
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
   .candyBox {
     width: 7px;
     height: 7px;
@@ -608,8 +639,8 @@ a {
   }
   
   .light .candyBox {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     outline: 3px solid ;
     border-radius: 100px;
     background: none;
