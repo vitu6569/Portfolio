@@ -370,7 +370,7 @@ a {
   height: 75vh;
   background: var(--bg-img);
   opacity: 0.18;
-  background-size: cover;
+  background-size: 100vw;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -429,38 +429,36 @@ a {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-color);
 }
-
-#aboutContainer {
+#containerAbout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: all 1s;
+}
+#containerAbout {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 75vh;
-  background: none;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   transition: all 1s;
+  background: var(--bg-img);
+  background-size: 25vw;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transition: all 1.5s;
+
 }
-.on #aboutContainer {
+.on #containerAbout {
   background: var(--bg-img);
   opacity: 0.18;
-  background-size: cover;
+  background-size: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   transition: all 1.5s;
 }
-#aboutContent {
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  gap: 16px;
-  flex-direction: column;
-  transition: all 0.5s;
-}
-.on #aboutContent {
-  display: none;
-}
-#aboutTitle {
+
+#introductionTitleAbout {
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
@@ -472,14 +470,17 @@ a {
   letter-spacing: 2.2px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-color);
-  border-bottom: 3px solid var(--text-color);
-  width: 100%;
+  border-top: 1px solid var(--text-color);
+}
+.on #introductionTitleAbout {
+  display: none;
+  transition: all 1s;
 }
 #transparentB {
   color: transparent;
 }
 #aboutResume {
-  max-width: 42rem;
+  max-width: 45.5%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   font-size: 1.188vw;
@@ -488,7 +489,10 @@ a {
   color: var(--text-color);
   letter-spacing: 2.2px;
 }
-
+.on #aboutResume {
+  display: none;
+  transition: all 1s;
+}
 @media (max-width: 468px) {
   * {
     margin: 0;
@@ -807,64 +811,69 @@ a {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--text-color);
   }
-/*
-  #aboutContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 80vh;
-    background: none;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all 1s;
-  }
-*/
-  .on #aboutContainer {
-    background: var(--bg-img);
-    opacity: 0.18;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all 1.5s;
-  }
-  #aboutContent {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    gap: 16px;
-    flex-direction: column;
-    transition: all 0.5s;
-  }
-  .on #aboutContent {
-    display: none;
-  }
-  #aboutTitle {
-    text-transform: uppercase;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    text-align: start;
-    font-size: 36px;
-    color: var(--text-color);
-    text-shadow: 5px 5px 75px rgba(255, 68, 0, 0.252);
-    margin: 0;
-    letter-spacing: 2.2px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--text-color);
-    border-bottom: 3px solid var(--text-color);
-    width: 100%;
-  }
-  #transparentB {
-    color: transparent;
-  }
-  #aboutResume {
-    max-width: 42rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none;
-    text-align: start;
-    color: var(--text-color);
-    letter-spacing: 2.2px;
-  }
+#containerAbout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: all 1s;
+}
+#containerAbout {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  transition: all 1s;
+  background: var(--bg-img);
+  background-size: 500px;
+  background-position: center top 200%;
+  background-repeat: no-repeat;
+  transition: all 1.5s;
+
+}
+.on #containerAbout {
+  background: var(--bg-img);
+  opacity: 0.18;
+  background-size: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1.5s;
+}
+
+#introductionTitleAbout {
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 10.21vw;
+  color: var(--text-color);
+  text-shadow: 5px 5px 75px rgba(255, 68, 0, 0.252);
+  margin: 0;
+  letter-spacing: 2.2px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+  border-top: none;
+  border-bottom: 1px solid var(--text-color);
+}
+.on #introductionTitleAbout {
+  display: none;
+  transition: all 1s;
+}
+#transparentB {
+  color: transparent;
+}
+#aboutResume {
+  max-width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 2.25vw;
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-color);
+  letter-spacing: 2.2px;
+}
+.on #aboutResume {
+  display: none;
+  transition: all 1s;
+}
 }
