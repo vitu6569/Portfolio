@@ -219,7 +219,6 @@ a {
   /* Adicione mais estilos aqui, se necessário */
 }
 
-
 .candyBox {
   width: 7px;
   height: 7px;
@@ -594,7 +593,35 @@ a {
     transform: scale(0.50);
     /* Adicione mais estilos aqui, se necessário */
   }
-
+  .on #menuSel {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+  }
+  #menuSel {
+    display: none;
+    position: fixed;
+    z-index: 2;
+  }
+  .menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1.5s;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #ul {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1.5s;
+  }
   .li {
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -668,6 +695,16 @@ a {
     justify-content: center;
     height: 80vh;
     background: var(--bg-img);
+    background-size: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .on #container {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background: var(--bg-img);
+    opacity: 0.18;
     background-size: 800px;
     background-position: center;
     background-repeat: no-repeat;
