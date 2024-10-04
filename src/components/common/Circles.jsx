@@ -12,7 +12,7 @@ function Circles() {
         html.className = currentState;
     
         if (currentState === "on") {
-
+            
         } else {
 
         }
