@@ -1,38 +1,52 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from '../common/Header'
 import Menu from '../common/menu'
 import { Link } from "react-router-dom";
 
-
 function Projects() {
-return (
-        <div>
-            <div><Header/></div>
-            <div><Menu/></div>
-        
-            <main id="mainContainer">
-                <nav>         
-                    <div id="nameProjects">
-                        <div id="headerProjects">
-                            <div id="titleProjects">
-                                <h1>projects</h1>
-                                <h1 id="number">1</h1>
+
+    const [isHovered, setIsHovered] = useState(false)
+    
+    return (
+            <div>
+                <div><Header/></div>
+                <div><Menu/></div>
+            
+                <main id="mainContainer">
+                    <nav>         
+                        <div id="nameProjects">
+                            <div id="headerProjects">
+                                <div id="titleProjects">
+                                    <h1>projects</h1>
+                                    <h1 id="number">1</h1>
+                                </div>
+                            </div>
+                            <div id="cardNames">
+                                <div className="cardDesign start">
+                                    <h1 className="title" id="ageApp">Age-App-Calculator</h1><p className="status"><span className="colorStatus on"></span>Status</p>
+                                </div>
+                                <div className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
+                                </div>
+                                <div className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
+                                </div>
+                                <div className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
+                                </div>
+                                <div className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
+                                </div>
+                                <div className="cardDesign end">
+                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
+                                </div>
                             </div>
                         </div>
-                        <div id="cardNames">
-                            <div className="cardDesign start"></div>
-                            <div className="cardDesign mid"></div>
-                            <div className="cardDesign mid"></div>
-                            <div className="cardDesign mid"></div>
-                            <div className="cardDesign mid"></div>
-                            <div className="cardDesign end"></div>
-                        </div>
-                    </div>
-                    <div id="imagesPojects"></div>
-                </nav>
-            </main>
-        </div>
-    )
+                        <div id="imagesPojects"></div>
+                    </nav>
+                </main>
+            </div>
+        )
 }
 
 /*

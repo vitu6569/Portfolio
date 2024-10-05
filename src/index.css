@@ -533,6 +533,10 @@ a {
   gap: 12px;
 }
 .cardDesign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 250px 0 36px;
   border-top: 1px solid var(--surface-color) ;
   border-left: 1px solid var(--surface-color) ;
   border-bottom: 1px solid var(--surface-color) ;
@@ -544,6 +548,14 @@ a {
   border-top: 1px solid var(--surface-color) ;
   border-left: 1px solid var(--surface-color) ;
   border-bottom: 1px solid transparent;
+  border-radius: 4px;
+  width: 50%;
+  height: 10vh;
+}
+.cardDesign.start:hover {
+  border-top: 1px solid var(--surface-color) ;
+  border-left: 1px solid var(--surface-color) ;
+  border-bottom: 1px solid var(--surface-color);
   border-radius: 4px;
   width: 50%;
   height: 10vh;
@@ -564,7 +576,55 @@ a {
   width: 50%;
   height: 10vh;
 }
-
+.title {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 0.75vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--second-text-color);
+  letter-spacing: 2.2px;
+  text-shadow: var(--textShadow);
+}
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 0.75vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--second-text-color);
+  letter-spacing: 2.2px;
+  text-shadow: var(--textShadow);
+}
+.colorStatus {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(50, 50, 50, 0);
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 99px;
+}
+.colorStatus.on {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 99px;
+}
+.colorStatus.off {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 99px;
+}
 @media (max-width: 468px) {
   * {
     margin: 0;
