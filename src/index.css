@@ -467,7 +467,6 @@ a {
   text-align: start;
   font-size: 4.21vw;
   color: var(--text-color);
-  text-shadow: var(--textShadow);
   margin: 0;
   letter-spacing: 2.2px;
   -webkit-text-stroke-width: 1px;
@@ -527,7 +526,6 @@ a {
   text-align: start;
   color: var(--second-text-color);
   letter-spacing: 2.2px;
-
   text-shadow: var(--textShadow);
 }
 .pjcColumn {
