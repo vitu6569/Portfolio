@@ -2,7 +2,6 @@ import React from "react";
 import Header from '../common/Header'
 import Menu from '../common/menu'
 import { Link } from "react-router-dom";
-import Cards from "../common/Cards";
 
 
 function Projects() {
@@ -10,25 +9,28 @@ return (
         <div>
             <div><Header/></div>
             <div><Menu/></div>
-            <div id="projectContainer">
-                <div id="projectDesc">
-                    <div id="Project">Project</div>
-                    <div id="infoDesc">
-                        <div id="StatsDesc">Status</div>
-                        <div id="DateDesc">Date</div>
+        
+            <main id="mainContainer">
+                <nav>         
+                    <div id="nameProjects">
+                        <div id="headerProjects">
+                            <div id="titleProjects">
+                                <h1>projects</h1>
+                                <h1 id="number">1</h1>
+                            </div>
+                        </div>
+                        <div id="cardNames">
+                            <div className="cardDesign start"></div>
+                            <div className="cardDesign mid"></div>
+                            <div className="cardDesign mid"></div>
+                            <div className="cardDesign mid"></div>
+                            <div className="cardDesign mid"></div>
+                            <div className="cardDesign end"></div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div id="pjcColumn">
-                <div id="pjcScroll">
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                </div>
-            </div>
+                    <div id="imagesPojects"></div>
+                </nav>
+            </main>
         </div>
     )
 }
