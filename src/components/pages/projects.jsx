@@ -1,11 +1,23 @@
 import React, {useState} from "react";
 import Header from '../common/Header'
 import Menu from '../common/menu'
-import { Link } from "react-router-dom";
+
+function CustomCard({ children }) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className={`cardDesign ${isHovered ? 'hovered' : ''}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{ transform: isHovered ? 'scale(1)' : 'scale(0.99)',  backgroundColor: isHovered ? "var(--surface-color)" : ""}}
+        >
+            {children}
+        </div>
+    );
+}
 
 function Projects() {
-
-    const [isHovered, setIsHovered] = useState(false)
     
     return (
             <div>
@@ -22,27 +34,34 @@ function Projects() {
                                 </div>
                             </div>
                             <div id="cardNames">
-                                <div className="cardDesign start">
-                                    <h1 className="title" id="ageApp">Age-App-Calculator</h1><p className="status"><span className="colorStatus on"></span>Status</p>
-                                </div>
-                                <div className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
-                                </div>
-                                <div className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
-                                </div>
-                                <div className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
-                                </div>
-                                <div className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
-                                </div>
-                                <div className="cardDesign end">
-                                    <h1 className="title">Coming son</h1><p className="status"><span className="colorStatus"></span>Status</p>
-                                </div>
+                                <a href="https://vitu6569.github.io/Age-App-Calculate/" target="blank">                            
+                                    <CustomCard className="cardDesign start">
+                                        <h1 className="title" id="ageApp">Age-App-Calculator</h1>
+                                        <p className="status"><span className="colorStatus on"></span>Status</p>
+                                    </CustomCard>
+                                </a>
+                                <CustomCard className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1>
+                                    <p className="status"><span className="colorStatus"></span>Status</p>
+                                </CustomCard>
+                                <CustomCard className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1>
+                                    <p className="status"><span className="colorStatus"></span>Status</p>
+                                </CustomCard>
+                                <CustomCard className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1>
+                                    <p className="status"><span className="colorStatus"></span>Status</p>
+                                </CustomCard>
+                                <CustomCard className="cardDesign mid">
+                                    <h1 className="title">Coming son</h1>
+                                    <p className="status"><span className="colorStatus"></span>Status</p>
+                                </CustomCard>
+                                <CustomCard className="cardDesign end">
+                                    <h1 className="title">Coming son</h1>
+                                    <p className="status"><span className="colorStatus"></span>Status</p>
+                                </CustomCard>
                             </div>
                         </div>
-                        <div id="imagesPojects"></div>
                     </nav>
                 </main>
             </div>
