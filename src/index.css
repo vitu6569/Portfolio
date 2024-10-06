@@ -150,7 +150,7 @@ a {
   height: 36px;
   background: var(--switch-bg-url) no-repeat center;
   border: none;
-  border-radius: 50%;
+  border-radius: 50vw;
   animation: rotate-back 2s forwards;
   z-index: 1;
 
@@ -494,7 +494,7 @@ a {
 
 /* Projects */
 #headerProjects {
-  width: 50%;
+  width: 50vw;
   border-bottom: 1.75px solid var(--stroke-color);
 }
 #titleProjects {
@@ -542,10 +542,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 250px 0 36px;
+  padding: 0 36px 0 36px;
   border: 1px solid var(--surface-color) ;
   border-radius: 4px;
-  width: 50%;
+  width: 50vw;
   height: 10vh;
   position: relative;
   z-index: 2;
@@ -559,7 +559,7 @@ a {
   padding: 0 250px 0 36px;
   border: 1px solid var(--surface-color) ;
   border-radius: 4px;
-  width: 50%;
+  width: 50vw;
   height: 10vh;
   position: relative;
   z-index: 2;
@@ -654,7 +654,7 @@ a {
   .errorElement {
     font-size: 50px;
     text-align: center;
-    margin: 50% 0;
+    margin: 50vw 0;
     color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
@@ -710,7 +710,7 @@ a {
     height: 32px;
     background: var(--switch-bg-url) no-repeat center;
     border: none;
-    border-radius: 50%;
+    border-radius: 50vw;
     animation: rotate-back 2s forwards;
     z-index: 1;
   }
@@ -1007,4 +1007,127 @@ a {
     display: none;
     transition: all 1s;
   }
+  /* Projects */
+#headerProjects {
+  width: 90vw;
+  border-bottom: 1.75px solid var(--stroke-color);
+}
+#titleProjects {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.5vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--second-text-color);
+  letter-spacing: 2.2px;
+  text-shadow: var(--textShadow);
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+#number {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 5vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--second-text-color);
+  letter-spacing: 2.2px;
+  text-shadow: var(--textShadow);
+  padding: 0 4px 0 0;
+}
+#cardNames {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.on #cardNames {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cardDesign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px 0 36px;
+  border: 1px solid var(--surface-color) ;
+  border-radius: 4px;
+  width: 90vw;
+  height: 10vh;
+  position: relative;
+  z-index: 2;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.on .cardDesign {
+  display:none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px 0 36px;
+  border: 1px solid var(--surface-color) ;
+  border-radius: 4px;
+  width: 50vw;
+  height: 10vh;
+  position: relative;
+  z-index: 2;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.title {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 2.5vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--second-text-color);
+  letter-spacing: 2.2px;
+  text-shadow: var(--textShadow);
+}
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 2.5vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--second-text-color);
+  letter-spacing: 2.2px;
+  text-shadow: var(--textShadow);
+}
+.colorStatus {
+  width: 7px;
+  height: 7px;
+  background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 99px;
+}
+.colorStatus.on {
+  width: 7px;
+  height: 7px;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 99px;
+}
+.colorStatus.off {
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 99px;
+}
 }
