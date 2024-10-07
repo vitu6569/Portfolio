@@ -980,10 +980,10 @@ a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: transparent;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2.2px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--text-color);
   }
@@ -995,7 +995,7 @@ a {
     max-width: 71.875REM;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
     text-decoration: none;
     text-align: center;
     color: transparent;
@@ -1004,21 +1004,21 @@ a {
     margin: 0;
     border-top: 3px dashed var(--text-color);
     text-shadow: var(--textShadow);
-    letter-spacing: 1px;
+    letter-spacing: 2.2px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--text-color);
   }
 
   .transparanteL {
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.25px;
     -webkit-text-stroke-color: var(--text-color);
   }
   .transparanteLTwo {
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.25px;
     -webkit-text-stroke-color: var(--text-color);
   }
   .transparanteB {
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.25px;
     -webkit-text-stroke-color: var(--text-color);
   }
   #containerAbout {
