@@ -615,6 +615,81 @@ a {
   border: 1px solid red;
   border-radius: 99px;
 }
+/* Contact*/
+#containerContacts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: all 1s;
+}
+#containerContacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--bg-img);
+  background-size: 0vw;
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  transition: all 1.5s;
+
+}
+.on #containerContacts {
+  background: var(--bg-img);
+  opacity: 0.18;
+  background-size: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75vh;
+  transition: all 1.5s;
+}
+
+#introductionTitleContacts {
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  text-align: start;
+  font-size: 4.21vw;
+  color: var(--text-color);
+  margin: 0;
+  letter-spacing: 2.2px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+  border-bottom: 1px solid var(--surface-color);
+}
+.on #introductionTitleContacts {
+  display: none;
+  transition: all 1s;
+}
+#transparentO {
+  color: transparent;
+}
+#mail {
+  text-transform: uppercase;
+}
+#contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.nameCont {
+  max-width: 45.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.188vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--text-color);
+  letter-spacing: 2.2px;
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+}
+.on .nameCont {
+  display: none;
+  transition: all 1s;
+}
+
 @media (max-width: 468px) {
   * {
     margin: 0;
@@ -935,11 +1010,11 @@ a {
   }
 
   .transparanteL {
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 0.75px;
     -webkit-text-stroke-color: var(--text-color);
   }
   .transparanteLTwo {
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.75px;
     -webkit-text-stroke-color: var(--text-color);
   }
   #containerAbout {
@@ -1129,5 +1204,78 @@ a {
   background-color: red;
   border: 1px solid red;
   border-radius: 99px;
+}
+/* Contact*/
+#containerContacts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: all 1s;
+}
+#containerContacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--bg-img);
+  background-size: 0vw;
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  transition: all 1s;
+
+}
+.on #containerContacts {
+  background: var(--bg-img);
+  opacity: 0.18;
+  background-size: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1.5s;
+}
+
+#introductionTitleContacts {
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  text-align: start;
+  font-size: 10.21vw;
+  color: var(--text-color);
+  margin: 0;
+  letter-spacing: 2.2px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+  border-bottom: 1px solid var(--surface-color);
+}
+.on #introductionTitleContacts {
+  display: none;
+  transition: all 1s;
+}
+#transparentO {
+  color: transparent;
+}
+#mail {
+  text-transform: uppercase;
+}
+#contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.nameCont {
+  max-width: 45.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 2.188vw;
+  text-decoration: none;
+  text-align: start;
+  color: var(--text-color);
+  letter-spacing: 2.2px;
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+}
+.on .nameCont {
+  display: none;
+  transition: all 1s;
 }
 }
