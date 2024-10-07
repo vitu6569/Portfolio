@@ -1010,11 +1010,15 @@ a {
   }
 
   .transparanteL {
-    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-width: 0.50px;
     -webkit-text-stroke-color: var(--text-color);
   }
   .transparanteLTwo {
-    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-width: 0.50px;
+    -webkit-text-stroke-color: var(--text-color);
+  }
+  .transparanteB {
+    -webkit-text-stroke-width: 0.50px;
     -webkit-text-stroke-color: var(--text-color);
   }
   #containerAbout {
