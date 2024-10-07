@@ -983,7 +983,7 @@ a {
     font-size: 30px;
     color: transparent;
     margin: 0;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--text-color);
   }
@@ -1004,7 +1004,7 @@ a {
     margin: 0;
     border-top: 3px dashed var(--text-color);
     text-shadow: var(--textShadow);
-    letter-spacing: 2.2px;
+    letter-spacing: 1px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--text-color);
   }
