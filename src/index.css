@@ -133,7 +133,7 @@ a {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-  typing 2.5s steps( 14, end),
+  typing 2.75s steps( 14, end),
   blink-caret 0.75s step-end infinite;
 }
 @keyframes typing {
@@ -267,9 +267,61 @@ a {
   border-radius: 100px;
   background: none;
   transition: all 1.5s; 
-  z-index: 0;
+  z-index: 1;
+}
+.on .circleOne{
+  animation: leftAnimation 1s forwards;
+  transition: all 1s;
+}
+.on .circleNine{
+  animation: rightAnimation 1s forwards;
+  transition: all 1s;
 }
 
+@keyframes upAnimation {
+  0% {
+    position: relative;
+    bottom: 0;
+  }
+  100% {
+    position: relative;
+    bottom: 30px;
+    opacity: 0;
+  }
+}
+@keyframes downAnimation {
+  0% {
+    position: relative;
+    top: 0;
+  }
+  100% {
+    position: relative;
+    top: 30px;
+    opacity: 0;
+  }
+}
+@keyframes leftAnimation {
+  0% {
+    position: relative;
+    right: 0;
+  }
+  100% {
+    position: relative;
+    right: 30px;
+    opacity: 0;
+  }
+}
+@keyframes rightAnimation {
+  0% {
+    position: relative;
+    left: 0;
+  }
+  100% {
+    position: relative;
+    left: 30px;
+    opacity: 0;
+  }
+}
 .light .circleOne,
 .light .circleTwo,
 .light .circleFour {
