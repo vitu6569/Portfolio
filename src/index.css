@@ -240,10 +240,19 @@ a {
   outline: 3px solid;
   border-radius: 100px;
   background: none;
-  transition: all 1.5s; 
+  outline: 3px solid;
+  transition: all 1.5s;
   z-index: 0;
 }
-
+.on .candyBox {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background: none;
+  outline: 3px solid;
+  transition: all 1.5s;
+  z-index: 0;
+}
 .circleOne,
 .circleTwo,
 .circleFour {
@@ -269,58 +278,14 @@ a {
   transition: all 1.5s; 
   z-index: 1;
 }
-.on .circleOne{
-  animation: leftAnimation 1s forwards;
-  transition: all 1s;
-}
-.on .circleNine{
-  animation: rightAnimation 1s forwards;
-  transition: all 1s;
-}
-
-@keyframes upAnimation {
-  0% {
-    position: relative;
-    bottom: 0;
-  }
-  100% {
-    position: relative;
-    bottom: 30px;
-    opacity: 0;
-  }
-}
-@keyframes downAnimation {
-  0% {
-    position: relative;
-    top: 0;
-  }
-  100% {
-    position: relative;
-    top: 30px;
-    opacity: 0;
-  }
-}
-@keyframes leftAnimation {
-  0% {
-    position: relative;
-    right: 0;
-  }
-  100% {
-    position: relative;
-    right: 30px;
-    opacity: 0;
-  }
-}
-@keyframes rightAnimation {
-  0% {
-    position: relative;
-    left: 0;
-  }
-  100% {
-    position: relative;
-    left: 30px;
-    opacity: 0;
-  }
+.on .light .candyBox {
+  width: 7px;
+  height: 7px;
+  outline: 3px solid;
+  border-radius: 1px;
+  background: none;
+  transition: all 1.5s; 
+  z-index: 1;
 }
 .light .circleOne,
 .light .circleTwo,
