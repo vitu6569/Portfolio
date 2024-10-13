@@ -133,14 +133,13 @@ a {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-  typing 2.75s steps( 14, end),
-  blink-caret 0.75s step-end infinite;
+  typing 1.75s steps( 14, end),
+  blink-caret .75s step-end infinite;
 }
 @keyframes typing {
   from { width: 0% }
   to { width: 100% }
 }
-
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
@@ -243,15 +242,32 @@ a {
   outline: 3px solid;
   transition: all 1.5s;
   z-index: 0;
+  animation: menuButtonOffAnimation .75s forwards;
 }
 .on .candyBox {
   width: 7px;
   height: 7px;
-  border-radius: 1px;
   background: none;
-  outline: 3px solid;
   transition: all 1.5s;
   z-index: 0;
+
+  animation: menuButtonAnimation .25s forwards;
+}
+@keyframes menuButtonOffAnimation {
+  from {
+    border-radius: 0%;
+  }
+  to {
+    border-radius: 100%;
+  }
+}
+@keyframes menuButtonAnimation {
+  from {
+    border-radius: 100%;
+  }
+  to {
+    border-radius: 0%;
+  }
 }
 .circleOne,
 .circleTwo,
@@ -274,15 +290,6 @@ a {
   height: 7px;
   outline: 3px solid;
   border-radius: 100px;
-  background: none;
-  transition: all 1.5s; 
-  z-index: 1;
-}
-.on .light .candyBox {
-  width: 7px;
-  height: 7px;
-  outline: 3px solid;
-  border-radius: 1px;
   background: none;
   transition: all 1.5s; 
   z-index: 1;
@@ -325,17 +332,17 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  animation: slideAnimation 1s ;
+  animation: slideAnimation 1s;
   transition: all 1s;
 }
 @keyframes slideAnimation  {
-  0% {
+  from {
     position: relative;
     right: 150%;
   }
-  100% {
+  to {
     position: relative;
-    right: 0;
+    right: 0%;
   }
 }
 #ul {
@@ -359,6 +366,14 @@ a {
   transition: all 1s;
 }
 @keyframes slideAnimationLetters  {
+  0% {
+    letter-spacing: 50px;
+  }
+  100% {
+    letter-spacing: 2.2px;
+  }
+}
+@keyframes slideBackAnimationLetters  {
   0% {
     letter-spacing: 50px;
   }
@@ -438,8 +453,8 @@ a {
 }
 
 .on #introduction {
-  display: none;
-  transition: all 1s ease;
+  opacity: 0;
+  transition: all 0.75s ease;
 }
 #introduction {
   text-transform: uppercase;
@@ -458,8 +473,8 @@ a {
   color: var(--text-color);
 }
 .on #resume {
-  display: none;
-  transition: all 1s ease;
+  opacity: 0;
+  transition: all 0.75s ease;
 }
 #resume {
   max-width: 71.875REM;
@@ -495,13 +510,11 @@ a {
   justify-content: center;
   flex-direction: column;
   height: 75vh;
-  transition: all 1s;
   background: var(--bg-img);
   background-size: 25vw;
   background-position: right center;
   background-repeat: no-repeat;
   transition: all 1.5s;
-
 }
 .on #containerAbout {
   background: var(--bg-img);
@@ -551,6 +564,11 @@ a {
 #headerProjects {
   width: 50vw;
   border-bottom: 1.75px solid var(--stroke-color);
+  transition: all 1s;
+}
+.on #headerProjects {
+  opacity: 0;
+  transition: all 1s;
 }
 #titleProjects {
   color: var(--text-color);
@@ -563,7 +581,6 @@ a {
   color: var(--second-text-color);
   letter-spacing: 2.2px;
   text-shadow: var(--textShadow);
-
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -586,12 +603,14 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: all .25s 1000ms;
 }
 .on #cardNames {
   padding: 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
+  transition: all .25s;
 }
 .cardDesign {
   display: flex;
@@ -604,23 +623,41 @@ a {
   height: 10vh;
   position: relative;
   z-index: 2;
-  transition: all 0.25s;
+  animation: inputCardsAnimation 1s forwards;
+  animation-delay: 0;
   cursor: pointer;
 }
 .on .cardDesign {
-  display:none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 250px 0 36px;
+  padding: 0 36px 0 36px;
   border: 1px solid var(--surface-color) ;
   border-radius: 4px;
   width: 50vw;
   height: 10vh;
-  position: relative;
   z-index: 2;
-  transition: all 0.25s;
+  animation: outCardsAnimation 1s forwards;
+  animation-delay: 300ms;
   cursor: pointer;
 }
+@keyframes outCardsAnimation {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: 150%;
+  }
+}
+@keyframes inputCardsAnimation {
+  0% {
+    right: 150%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
 .title {
   color: var(--text-color);
   text-transform: uppercase;
@@ -1140,7 +1177,7 @@ a {
     display: none;
     transition: all 1s;
   }
-  /* Projects */
+/* Projects */
 #headerProjects {
   width: 90vw;
   border-bottom: 1.75px solid var(--stroke-color);
