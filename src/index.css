@@ -389,40 +389,60 @@ a {
   flex-direction: row;
   align-items: baseline;
   gap: 4px;
+  transition: all 0.5s;
 }
 #home::before {
   content: "01.";
   font-size: 20px;
+}
+#home:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
 }
 #about {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   gap: 4px;
+  transition: all 0.5s;
 }
 #about::before {
   content: "02.";
   font-size: 20px;
+}
+#about:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
 }
 #project {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   gap: 4px;
+  transition: all 0.5s;
 }
 #project::before {
   content: "03.";
   font-size: 20px;
+}
+#project:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
 }
 #contact {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   gap: 4px;
+  transition: all 0.5s;
 }
 #contact::before {
   content: "04.";
   font-size: 20px;
+}
+#contact:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
 }
 
 #container {
