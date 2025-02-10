@@ -41,23 +41,23 @@ function Projects() {
                                     </CustomCard>
                                 </a>
                                 <CustomCard className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1>
+                                    <h1 className="title">Coming soon</h1>
                                     <p className="status"><span className="colorStatus"></span>Status</p>
                                 </CustomCard>
                                 <CustomCard className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1>
+                                    <h1 className="title">Coming soon</h1>
                                     <p className="status"><span className="colorStatus"></span>Status</p>
                                 </CustomCard>
                                 <CustomCard className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1>
+                                    <h1 className="title">Coming soon</h1>
                                     <p className="status"><span className="colorStatus"></span>Status</p>
                                 </CustomCard>
                                 <CustomCard className="cardDesign mid">
-                                    <h1 className="title">Coming son</h1>
+                                    <h1 className="title">Coming soon</h1>
                                     <p className="status"><span className="colorStatus"></span>Status</p>
                                 </CustomCard>
                                 <CustomCard className="cardDesign end">
-                                    <h1 className="title">Coming son</h1>
+                                    <h1 className="title">Coming soon</h1>
                                     <p className="status"><span className="colorStatus"></span>Status</p>
                                 </CustomCard>
                             </div>
